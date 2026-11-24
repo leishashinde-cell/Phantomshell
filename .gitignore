@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.db
+evolution/verified_traces.jsonl
+.venv/
