@@ -1,26 +1,21 @@
-# PhantomShell — Phase-1 GitHub Codespaces Simulation
+# Phantomshell (Phase 1)
 
-**AgenticX 2.0 Hackathon · Track 01 (Software: Agentic AI) · Team Vada Pav**
+A multi-agent Python codebase built around a filesystem world-twin graph, agent orchestration modules, and dual adaptation evolution loops, configured for GitHub Codespaces[cite: 1].
 
-## 1-Click Run on GitHub Codespaces
-1. Push this repository to GitHub and click **Code → Codespaces → Create codespace on main**.
-2. `.devcontainer/devcontainer.json` automatically installs dependencies and runs the 35-test suite.
-3. Launch the live Split-Screen Judge Demo UI:
-   ```bash
-   streamlit run app.py --server.port 8501 --server.address 0.0.0.0
-   ```
-   Port `8501` auto-forwards directly in your browser!
+## What Is Inside
 
-## Run Terminal Simulation & Tests
-```bash
-# Run all 35 verification, security & self-healing tests
-python3 -m unittest -v tests/test_shell.py
+- `app.py` and `demo_cli.py`: Main application entry points and command-line demo runner[cite: 1].
+- `world_twin/fs_graph.py`: Filesystem world-twin graph model[cite: 1].
+- `agents/manager_gate.py`, `agents/profiler_weaver.py`, and `agents/shell_worker.py`: Agent gating, profiling, and shell worker components[cite: 1].
+- `evolution/loop_a_pace.py` and `evolution/loop_b_adaption.py`: Adaptation evolution loops[cite: 1].
+- `tests/test_shell.py`: Test suite for shell behavior[cite: 1].
+- `requirements.txt` and `.devcontainer/devcontainer.json`: Dependencies and dev container configuration[cite: 1].
 
-# Run the automated 4-minute CLI demo simulation
-python3 demo_cli.py
-```
+## Run Locally
 
-## Supported Worker Modes (Sidebar Selector)
-* **`codespaces_sim` (Default):** Instant zero-GPU simulation with `<20 ms` SQLite POSIX Fast-Path, optional 4–12 ms OS timing jitter, realistic SQL/network replies, and live Manager Gate + Loop A giveaway self-healing.
-* **`ollama`:** Connects to local `http://localhost:11434` (`qwen2.5:7b`).
-* **`openai_compat`:** Uses `OPENAI_API_BASE` + `OPENAI_API_KEY` env vars (Groq / OpenRouter / Adaption) for live LLM inference inside Codespaces.
+1. Install dependencies:
+   pip install -r requirements.txt[cite: 1]
+2. Run the demo:
+   python demo_cli.py[cite: 1]
+3. Run tests:
+   pytest[cite: 1]
